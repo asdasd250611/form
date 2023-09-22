@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="made by saurav sharma">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="con">
+        <h1>madebysaurav</h1>
+        <div class="alert"></div>
+        <table>
+            <form id="data" novalidate>
+                <tr>
+                    <td><label for="FirstName">First Name:</label></td>
+                    <td><input type="text" id="FirstName" name="FirstName" placeholder="First Name..."></td>
+
+                </tr>
+                <tr>
+                    <td><label for="LastName">Last Name:</label></td>
+                    <td><input type="text" id="LastName" name="LastName" placeholder="Last Name..."></td>
+
+                </tr>
+                <tr>
+                    <td><label for="PhoneNumber">Phone Number:</label></td>
+                    <td><input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="9876543210"></td>
+                  
+
+                </tr>
+                <tr>
+                    <td><label for="Email">Email:</label></td>
+                    <td><input type="email" id="Email" name="Email" placeholder="abc@gmail.com"></td>
+
+                </tr>
+                <tr>
+                    <td><label for="msg">Massage:</label></td>
+                    <td><textarea name="msg" id="msg" cols="22" rows="5" id="msg"
+                            placeholder="Write a Query..."></textarea></td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="3"><input type="submit" value="Submit"></td>
+
+                </tr>
+
+            </form>
+        </table>
+        <table class="table">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Massage</th>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+
+        function remove() {
+            document.querySelector('#FirstName').value = "";
+            document.querySelector('#LastName').value = "";
+
+            document.querySelector('#PhoneNumber').value = "";
+
+            document.querySelector('#Email').value = "";
+            var msg = document.querySelector('#msg').value = "";
+        }
+
+        document.querySelector("#PhoneNumber").addEventListener("blur", function () {
+            var PhoneNumber = document.querySelector('#PhoneNumber').value;
+                var pa = /^[6-9]\d{9}$/;
+
+                if (pa.test(PhoneNumber)) {
+                    document.querySelector('.alert').classList.add("valid")
+                    document.querySelector('.alert').innerHTML = "Phone Number Valid"
+                } else {
+                    document.querySelector('.alert').classList.add("invalid")
+                    document.querySelector('.alert').innerHTML = "Phone Number inValid"
+
+                }
+
+            })
+
+
+        document.querySelector('#data').addEventListener("submit", function (e) {
+            e.preventDefault();
+
+
+
+            var First = document.querySelector('#FirstName').value;
+            var LastName = document.querySelector('#LastName').value;
+
+             PhoneNumber = document.querySelector('#PhoneNumber').value;
+
+            var Email = document.querySelector('#Email').value;
+
+            var msg = document.querySelector('#msg').value;
+           
+            if (First != "" && LastName != "" && PhoneNumber != "" && Email != "" && msg != "") {
+                document.querySelector('.table tbody').innerHTML += `<tr><td>${First}</td><td>${LastName}</td><td>${PhoneNumber}</td><td>${Email}</td><td>${msg}</td></tr>`;
+            }
+
+
+
+            remove();
+        })
+
+
+    </script>
+</body>
+
+</html>

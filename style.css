@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* table{
+    border: 1px solid black;
+  
+
+} */
+label,input,p{
+    font-size: 25px;
+
+}
+label{
+    display: inline;
+    font-weight: 800;
+    margin: 0 20px 0 10px;
+}
+.con{
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+
+}
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+input,textarea{
+    padding: 15px;
+    font-size: 25px;
+
+    margin: 15px 10px;
+}
+input[type='submit']{
+    margin: 11px auto;
+    width: 50%;
+    display: block;
+    background-color: rgb(112, 112, 220);
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+
+}
+input[type='submit']:hover{
+    background-color: rgb(71, 71, 235);
+}
+.ac{
+    border-left:5px solid rgb(2, 173, 2);
+    background-color: rgb(181, 252, 181);
+    padding: 15px;
+   
+}
+
+.table{
+    table-layout: fixed;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+.table th{
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color:rgb(71, 71, 235);
+    color: #fff;
+}
+.table td{
+
+    padding: 15px;
+    border: 1px solid black;
+}
+.table tr:nth-child(even){
+   background-color: #bfbcbc;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+}
+textarea{
+    overflow: hidden;
+}
+.valid{
+    border-left: 2px solid green;
+    background-color: #92efbe;
+    color:  green;
+}
+.invalid{
+    border-left: 2px solid rgb(253, 40, 40);
+    background-color: #ff9a9a;
+    color:  rgb(253, 40, 40);
+}
