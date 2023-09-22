@@ -70,9 +70,7 @@
         function remove() {
             document.querySelector('#FirstName').value = "";
             document.querySelector('#LastName').value = "";
-
             document.querySelector('#PhoneNumber').value = "";
-
             document.querySelector('#Email').value = "";
             var msg = document.querySelector('#msg').value = "";
             document.querySelector('.alert').textContent = "";
@@ -83,6 +81,7 @@
 
         document.querySelector("#PhoneNumber").addEventListener("blur", function () {
             var PhoneNumber = document.querySelector('#PhoneNumber').value;
+            if(PhoneNumber != ""){
                 var pa = /^[6-9]\d{9}$/;
 
                 if (pa.test(PhoneNumber)) {
@@ -91,32 +90,20 @@
                 } else {
                     document.querySelector('.alert').classList.add("invalid")
                     document.querySelector('.alert').innerHTML = "Phone Number inValid"
-
                 }
-
+            }
             })
-
 
         document.querySelector('#data').addEventListener("submit", function (e) {
             e.preventDefault();
-
-
-
             var First = document.querySelector('#FirstName').value;
             var LastName = document.querySelector('#LastName').value;
-
              PhoneNumber = document.querySelector('#PhoneNumber').value;
-
             var Email = document.querySelector('#Email').value;
-
             var msg = document.querySelector('#msg').value;
-           
             if (First != "" && LastName != "" && PhoneNumber != "" && Email != "" && msg != "") {
                 document.querySelector('.table tbody').innerHTML += `<tr><td>${First}</td><td>${LastName}</td><td>${PhoneNumber}</td><td>${Email}</td><td>${msg}</td></tr>`;
             }
-
-
-
             remove();
         })
 
