@@ -75,6 +75,10 @@
 
             document.querySelector('#Email').value = "";
             var msg = document.querySelector('#msg').value = "";
+            document.querySelector('.alert').textContent = "";
+            document.querySelector('.alert').classList.remove("valid")
+            document.querySelector('.alert').classList.remove("invalid")
+
         }
 
         document.querySelector("#PhoneNumber").addEventListener("blur", function () {

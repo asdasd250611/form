@@ -91,9 +91,16 @@ textarea{
     border-left: 2px solid green;
     background-color: #92efbe;
     color:  green;
+    width: 50%;
+    margin-left: 25px;
+    padding: 10px;
+
 }
 .invalid{
     border-left: 2px solid rgb(253, 40, 40);
     background-color: #ff9a9a;
     color:  rgb(253, 40, 40);
-}
+    width: 50%;
+    margin-left: 25px;
+
+    padding: 10px;}
